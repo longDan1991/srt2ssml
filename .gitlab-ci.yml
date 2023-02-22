@@ -1,0 +1,10 @@
+variables:
+  REPLICAS: '1'
+  MEM_REQUEST: '256Mi'
+  MEM_LIMIT: '1024Mi'
+  DEPLOY_MODE: 'default'
+
+include:
+  - project: devops/ci-config/docker
+    ref: main
+    file: "/docker-static-builder.yaml"
